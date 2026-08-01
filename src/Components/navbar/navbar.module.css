@@ -1,0 +1,13 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid red;
+   
+}
+
+h1{
+    color: black;
+    font-size: 30px;
+    margin-left: 200px;
+}

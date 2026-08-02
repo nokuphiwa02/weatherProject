@@ -7,3 +7,9 @@
     align-items: center;
     margin-top: 20px;
 }
+
+.searchInput{
+    width: 85vw;
+    height: 30px;
+    
+}

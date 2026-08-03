@@ -2,7 +2,7 @@
 import styles from './navbar.module.css'
 import facebook from "../../assets/facebook.png";
 import twitter from "../../assets/twitter.png";
-// import tikTok from "../../assets/tikTok.png";
+import tikTok from "../../assets/tikTok.png";
 
 export const Navbar = () => {
   return (
@@ -13,7 +13,7 @@ export const Navbar = () => {
         <h1>Weather App</h1>
        <div className={styles.iconImage2}>
         <img src={twitter} alt="Twitter.png" />
-        {/* <img src={tikTok} alt="TikTok.png" /> */}
+        <img src={tikTok} alt="TikTok.png" />
     </div>
     </div>
   )

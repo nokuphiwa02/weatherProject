@@ -1,20 +1,28 @@
 .navbar{
     display: flex;
-    /* width: 100%;
-    height: 100px; */
-    background-color: Pink;
+    height: 120px;
+    background-color: #053d3d;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid red;
+    border: 1px solid black;
    
 }
 
 h1{
-    color: black;
+    color: white;
     font-size: 30px;
     margin-left: 200px;
+   
 }
-.iconImage1{
-    width:10px;
+.iconImage1 img{
+    width:80px;
+    height: 70px;
+    
 }
 
+.iconImage2{
+    display:flex;
+    height: 50px;
+    width: 20px;
+    margin-right: 200px;
+}

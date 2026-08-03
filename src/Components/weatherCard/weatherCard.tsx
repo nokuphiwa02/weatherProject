@@ -1,4 +1,6 @@
 import styles from "./weatherCard.module.css";
+// import { useState } from "react";
+
 
 export type weatherCardProps = {
   city: string;
@@ -7,12 +9,20 @@ export type weatherCardProps = {
   humidity: number;
 };
 
+
+
 const WeatherCard = ({
   city,
   temperature,
   windSpeed,
   humidity,
 }: weatherCardProps) => {
+
+//   const {weather, setWeather} = useState<weatherCardProps>([
+//   {name: "London", temperature: 15, windSpeed: "10 km/h", humidity: 70},
+// ]);
+
+
   return (
     <div className={styles.weatherCardContent}>
       <div className={styles.weatherCard}>

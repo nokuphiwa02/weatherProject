@@ -2,11 +2,15 @@ import { Navbar } from "./Components/navbar/navbar";
 import { SearchBar } from "./Components/searchBar/searchBar";
 import WeatherCard from "./Components/weatherCard/weatherCard";
 import { type weatherCardProps } from "./Components/weatherCard/weatherCard";
+// import { useState } from "react";
 
 type AppProps = {
   weather: weatherCardProps[];
+
 };
+
 export const App: React.FC<AppProps> = ({ weather }) => {
+
   return (
     <div>
       <Navbar />

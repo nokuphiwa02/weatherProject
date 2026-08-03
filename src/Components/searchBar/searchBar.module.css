@@ -8,6 +8,12 @@
     background-color: #053d3d;
 }
 
+.searchIcon{
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
+}
+
 .searchInput{
     width: 85vw;
     height: 30px;

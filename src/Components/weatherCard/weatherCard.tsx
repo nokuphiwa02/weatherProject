@@ -20,12 +20,13 @@ const WeatherCard = ({
 
   return (
     <div className={styles.weatherCardContent}>
-      <div className={styles.weatherCard}>
+    <div className={styles.weatherCard}>
+
+      <div className={styles.weatherCardHeader}>
         <p className={styles.p}>Tuesday, 04 August</p>
         <h2 className={styles.time}>12 : 00</h2>
-         {/* <img src={sun} alt="Sun.png" className={styles.SunIcon} /> */}
         <h2 id="location">Durban {city} </h2>
-       
+       </div>
         <div className={styles.weatherInfo}>
           <p id="temp">temperature : 24 {temperature}°C</p>
           <p id="condition">windspeed : 5km/h {windSpeed}</p>

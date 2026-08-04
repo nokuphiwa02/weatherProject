@@ -1,20 +1,20 @@
-
-import styles from './navbar.module.css'
+import styles from "./navbar.module.css";
 import facebook from "../../assets/facebook.png";
 import twitter from "../../assets/twitter.png";
 import tikTok from "../../assets/tikTok.png";
+// import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
   return (
     <div className={styles.navbar}>
-    <div className={styles.iconImage1}>
-     <img src={facebook} alt="Facebook.png" />
-    </div>
-        <h1>Weather App</h1>
-       <div className={styles.iconImage2}>
+      <div className={styles.iconImage1}>
+        <img src={facebook} alt="Facebook.png" />
+      </div>
+      <h1>Weather App</h1>
+      <div className={styles.iconImage2}>
         <img src={twitter} alt="Twitter.png" />
         <img src={tikTok} alt="TikTok.png" />
+      </div>
     </div>
-    </div>
-  )
-}
+  );
+};

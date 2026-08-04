@@ -1,4 +1,5 @@
 import { Navbar } from "./Components/navbar/navbar";
+// import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import { SearchBar } from "./Components/searchBar/searchBar";
 import WeatherCard from "./Components/weatherCard/weatherCard";
 import { type weatherCardProps } from "./Components/weatherCard/weatherCard";
@@ -6,11 +7,9 @@ import { type weatherCardProps } from "./Components/weatherCard/weatherCard";
 
 type AppProps = {
   weather: weatherCardProps[];
-
 };
 
 export const App: React.FC<AppProps> = ({ weather }) => {
-
   return (
     <div>
       <Navbar />

@@ -1,5 +1,5 @@
 import styles from "./weatherCard.module.css";
-// import { useState } from "react";
+// import sun from "../../assets/sun.png";
 
 
 export type weatherCardProps = {
@@ -10,7 +10,6 @@ export type weatherCardProps = {
 };
 
 
-
 const WeatherCard = ({
   city,
   temperature,
@@ -18,19 +17,19 @@ const WeatherCard = ({
   humidity,
 }: weatherCardProps) => {
 
-//   const {weather, setWeather} = useState<weatherCardProps>([
-//   {name: "London", temperature: 15, windSpeed: "10 km/h", humidity: 70},
-// ]);
-
 
   return (
     <div className={styles.weatherCardContent}>
       <div className={styles.weatherCard}>
-        <h2 id="location">{city}</h2>
+        <p className={styles.p}>Tuesday, 04 August</p>
+        <h2 className={styles.time}>12 : 00</h2>
+         {/* <img src={sun} alt="Sun.png" className={styles.SunIcon} /> */}
+        <h2 id="location">Durban {city} </h2>
+       
         <div className={styles.weatherInfo}>
-          <p id="temp">{temperature}°C</p>
-          <p id="condition">{windSpeed}</p>
-          <p id="humidity">Humidity: {humidity} </p>
+          <p id="temp">temperature : 24 {temperature}°C</p>
+          <p id="condition">windspeed : 5km/h {windSpeed}</p>
+          <p id="humidity">Humidity: 58 {humidity}%</p>
         </div>
       </div>
     </div>

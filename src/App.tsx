@@ -1,9 +1,9 @@
 import { Navbar } from "./Components/navbar/navbar";
-// import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import { SearchBar } from "./Components/searchBar/searchBar";
 import WeatherCard from "./Components/weatherCard/weatherCard";
 import { type weatherCardProps } from "./Components/weatherCard/weatherCard";
-// import { useState } from "react";
+import { HourlyForecast } from "./Components/HourlyForecast/HourlyForecast";
+import { DailyForecast } from "./Components/DailyForecast/DailyForecast";
 
 type AppProps = {
   weather: weatherCardProps[];
@@ -20,6 +20,8 @@ export const App: React.FC<AppProps> = ({ weather }) => {
         windSpeed={weather[0]?.windSpeed}
         humidity={weather[0]?.humidity}
       />
+      <HourlyForecast />
+      <DailyForecast />
     </div>
   );
 };

@@ -1,7 +1,8 @@
 .weatherCardContent {
   width: 100%;
+  gap: 10px;
   color: white;
-  background-color: #053d3d ;
+  background-color: #053d3d;
   border: 1px solid black;
 }
 
@@ -17,17 +18,17 @@
 
 h2{
   color: white;
-  margin-right: 280px;
-  margin-bottom: 80px;
+
 }
 
-.weatherInfo{
-  display:flex;
+.weatherInfo {
+  display: flex;
   gap: 10px;
   flex-direction: column;
   align-items: center;
-   border: 1px solid black;
-  justify-content: center ;
+  /* border: 1px solid black; */
+  justify-content: center;
+  margin-left: 100px;
 }
 
 /* .SunIcon{
@@ -36,19 +37,20 @@ h2{
   margin-left: 20px;
 } */
 
-.p{
+/* .p{
   padding-top: 50px;
-}
+} */
 
- .time{
-  margin-right: 20px;
-  padding-top: 70px;
+.time{
+  color: white;
  }
 
- .weatherCardHeader{
-  display:flex;
-  /* flex-direction: row; */
-  border: 1px solid black;
+.weatherCardHeader {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
   justify-content: flex-start;
   align-items: center;
- }
+  color: white;
+  margin-right: 100px;
+}

@@ -23,9 +23,9 @@ const WeatherCard = ({
     <div className={styles.weatherCard}>
 
       <div className={styles.weatherCardHeader}>
-        <p className={styles.p}>Tuesday, 04 August</p>
-        <h2 className={styles.time}>12 : 00</h2>
         <h2 id="location">Durban {city} </h2>
+         <p className={styles.p}>Tuesday, 04 August</p>
+        <h2 className={styles.time}>12 : 00</h2>
        </div>
         <div className={styles.weatherInfo}>
           <p id="temp">temperature : 24 {temperature}°C</p>
@@ -33,7 +33,7 @@ const WeatherCard = ({
           <p id="humidity">Humidity: 58 {humidity}%</p>
         </div>
       </div>
-    </div>
+     </div>
   );
 };
 export default WeatherCard;

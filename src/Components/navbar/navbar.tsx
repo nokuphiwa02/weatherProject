@@ -1,6 +1,6 @@
 import styles from "./navbar.module.css";
-import facebook from "../../assets/facebook.png";
-import twitter from "../../assets/twitter.png";
+import facebook from "../../assets/Facebook.png";
+import twitter from "../../assets/Twitter.png";
 import tikTok from "../../assets/Tiktok.png";
 
 export const Navbar = () => {

@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./DailyForecast.module.css";
 import { Text } from "../Text/Text";
 

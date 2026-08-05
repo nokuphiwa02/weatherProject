@@ -1,4 +1,3 @@
-
 import { Text } from "../Text/Text";
 import styles from "./HourlyForecast.module.css";
 

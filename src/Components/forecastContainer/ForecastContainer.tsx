@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./ForecastContainer.modules.css";
 
 import { DailyForecast } from "../DailyForecast/DailyForecast";

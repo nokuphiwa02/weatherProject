@@ -1,3 +1,4 @@
+
 import { Navbar } from "./Components/navbar/navbar";
 import { SearchBar } from "./Components/searchBar/searchBar";
 import WeatherCard from "./Components/weatherCard/weatherCard";
@@ -17,8 +18,10 @@ export const App: React.FC<AppProps> = ({ weather }) => {
         city={weather[0]?.city}
         temperature={weather[0]?.temperature}
         windSpeed={weather[0]?.windSpeed}
-        humidity={weather[0]?.humidity}/>
-     <ForecastContainer/>
+        humidity={weather[0]?.humidity}
+      />
+      <ForecastContainer/>
+  
     </div>
   );
 };

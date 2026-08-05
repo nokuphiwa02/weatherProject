@@ -1,13 +1,7 @@
 
 import { Text } from "../Text/Text";
 import styles from "./HourlyForecast.module.css";
-// import sun from "../../assets/sun.png";
-// import snow from '../../assets/snow.png';
-// import rain from '../../assets/rain.png';
-// import cloud from '../../assets/cloud.png';
-// import hot from '../../assets/cloud.png';
-// import cloudysun from '../../assets/cloudy sun.png';
-// import cloudyrain from "../../assets/cloudy rain.png";
+
 
 export const HourlyForecast = () => {
   return (

@@ -1,25 +1,32 @@
-import React, {useState} from 'react'
+import React, { useState } from "react";
+import "./ForecastContainer.modules.css";
 
-import { DailyForecast } from '../DailyForecast/DailyForecast'
-import { HourlyForecast } from '../HourlyForecast/HourlyForecast'
-
+import { DailyForecast } from "../DailyForecast/DailyForecast";
+import { HourlyForecast } from "../HourlyForecast/HourlyForecast";
 
 export const ForecastContainer = () => {
-
-    const [active ,setActive] = useState <'hourly' |  'daily'>('hourly')
- 
-
+  const [active, setActive] = useState("hourly");
 
   return (
-    
-  <div className='content'>
-    <div className='btns'>
-      <button onClick={()=>setActive('hourly')} disabled={active=== 'hourly'}>Hourly Forecast</button>
-       <button onClick={()=>setActive('daily')} disabled={active=== 'daily'}>Daily Forecast</button>
+    <div className="content">
+      <div className="btns">
+        <button
+          onClick={() => setActive("hourly")}
+          className={active === "hourly" ? "active" : ""}
+          disabled={active === "hourly"}
+        >
+          Hourly Forecast
+        </button>
+        <button
+          onClick={() => setActive("daily")}
+          className={active === "daily" ? "active" : ""}
+          disabled={active === "daily"}
+        >
+          Daily Forecast
+        </button>
+      </div>
+      {active === "daily" && <DailyForecast />}
+      {active === "hourly" && <HourlyForecast />}
     </div>
-        {active === 'hourly' ? <DailyForecast/> : <HourlyForecast/>}
-  </div>
-  
-    
-  )
-}
+  );
+};

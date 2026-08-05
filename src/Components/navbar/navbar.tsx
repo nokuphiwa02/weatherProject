@@ -1,8 +1,7 @@
 import styles from "./navbar.module.css";
 import facebook from "../../assets/facebook.png";
 import twitter from "../../assets/twitter.png";
-import tikTok from "../../assets/tikTok.png";
-// import { Link } from 'react-router-dom';
+import tikTok from "../../assets/Tiktok.png";
 
 export const Navbar = () => {
   return (

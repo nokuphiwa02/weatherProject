@@ -14,8 +14,7 @@ export const HourlyForecast = () => {
     <>
 
     <div className={styles.hourlyContent}>
-       <button className={styles.hrly}>Hourly Forecast</button>
-       <button  className={styles.daily}>Daily Forecast</button>
+      
 
       <div className={styles.hourlyForecast}>
         <Text variant="p">6:00 AM</Text>

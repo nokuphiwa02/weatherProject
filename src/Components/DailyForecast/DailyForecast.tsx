@@ -6,41 +6,41 @@ export const DailyForecast = () => {
   return (
     <div className={styles.DailyContent}>
       <div className={styles.dailyForecast}>
-        <Text variant="p">6:00 AM</Text>
+        <Text variant="p">Monday</Text>
         ☀️
         <Text variant="h2">22°C</Text>
       </div>
 
       <div className={styles.dailyForecast}>
-        <Text variant="p">7:00 AM</Text>
+        <Text variant="p">Tuesday</Text>
         🌨️
         <Text variant="h2">22°C</Text>
       </div>
 
       <div className={styles.dailyForecast}>
-        <Text variant="p">8:00 AM</Text>
+        <Text variant="p">Wednesday</Text>
         🌧️
         <Text variant="h2">22°C</Text>
       </div>
 
       <div className={styles.dailyForecast}>
-        <Text variant="p">9:00 AM</Text>
+        <Text variant="p">Thursday</Text>
         💭
         <Text variant="h2">22°C</Text>
       </div>
 
       <div className={styles.dailyForecast}>
-        <Text variant="p">10:00 AM</Text>
+        <Text variant="p">Friday</Text>
         ☀️
         <Text variant="h2">22°C</Text>
       </div>
 
       <div className={styles.dailyForecast}>
-        <Text variant="p">11:00 AM</Text>⛅<Text variant="h2">22°C</Text>
+        <Text variant="p">saturday</Text>⛅<Text variant="h2">22°C</Text>
       </div>
 
       <div className={styles.dailyForecast}>
-        <Text variant="p">12:00 PM</Text>
+        <Text variant="p">Sunday</Text>
         ⛈️
         <Text variant="h2">22°C</Text>
       </div>

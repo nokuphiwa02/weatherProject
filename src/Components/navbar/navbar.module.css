@@ -1,7 +1,7 @@
 .navbar{
     display: flex;
     height: 120px;
-    background-color: #053d3d;
+    background-color: var(--background-color);
     justify-content: space-between;
     align-items: center;
     border: 1px solid black;
@@ -9,7 +9,7 @@
 }
 
 h1{
-    color: white;
+    color: var(--primary-color);
     font-size: 30px;
     margin-left: 200px;
    

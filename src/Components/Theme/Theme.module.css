@@ -1,0 +1,40 @@
+.themeContainer {
+  position: absolute;
+}
+
+.theme {
+  display: none;
+}
+
+.theme + label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  padding-left: 60px;
+}
+
+.theme + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 50px;
+  height: 26px;
+  border-radius: 20px;
+  background: gray;
+}
+
+.theme + label::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.3s;
+}
+
+.theme:checked + label::after {
+  transform: translateX(24px);
+}

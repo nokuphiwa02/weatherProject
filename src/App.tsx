@@ -1,29 +1,25 @@
+// import { Route, Routes } from "react-router-dom";
+// import { Setting } from "./Components/pages/Setting";
+// import { Home } from "./Components/pages/Home";
+// import { useState } from "react";
 
-import { Navbar } from "./Components/navbar/navbar";
-import { SearchBar } from "./Components/searchBar/searchBar";
-import WeatherCard from "./Components/weatherCard/weatherCard";
-import { type weatherCardProps } from "./Components/weatherCard/weatherCard";
-import { ForecastContainer } from "./Components/forecastContainer/ForecastContainer";
+// export const App = () => {
 
-type AppProps = {
-  weather: weatherCardProps[];
-};
+//    const [isDark, setIsDark] = useState(false);
 
-export const App: React.FC<AppProps> = ({ weather }) => {
-  return (
-    <div>
-      <Navbar />
-      <SearchBar />
-      <WeatherCard
-        city={weather[0]?.city}
-        temperature={weather[0]?.temperature}
-        windSpeed={weather[0]?.windSpeed}
-        humidity={weather[0]?.humidity}
-      />
-      <ForecastContainer/>
-  
-    </div>
-  );
-};
+//   return (
+//     <div  data-theme={isDark ? "dark" : "light"}>
+//       <Routes>
+//         <Route path="/settings" element={<Setting />} />
+//         <Route
+//           path="/"
+//           element={
+//             <Home  city="Durban" temperature={24} windSpeed={15} humidity={65} />
+//           }
+//         />
+//       </Routes>
+//     </div>
+//   );
+// };
 
-export default App;
+// export default App;

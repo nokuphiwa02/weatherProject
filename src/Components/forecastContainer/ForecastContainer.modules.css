@@ -7,12 +7,12 @@
   margin-top: 0;
   justify-content: center;
   align-items: center;
-  background-color: #053d3d;
+  background-color: var(--background-color);
 }
 
 .btns {
   position: relative;
-  background-color: #053d3d;
+  /* background-color: #053d3d; */
 }
 .active {
   background-color: #ffffff;

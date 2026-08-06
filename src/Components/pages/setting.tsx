@@ -1,27 +1,30 @@
 import styles from "./Setting.module.css";
 import { Theme } from "../Theme/Theme";
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 type SettingProps = {
   isDark: boolean;
   handleChange: () => void;
-  setIsDark: boolean;
+ 
 };
 
 export const Setting: React.FC<SettingProps> = ({ isDark, handleChange }) => {
-  // const toggleTheme = () => setIsDark(!isDark);
+  const navigate = useNavigate();
+  const backToHome =() => {
+    navigate("/")
+  }
+ 
 
   return (
     <>
       <div
-        className={styles.settingContainer}
-        data-theme={isDark ? "dark" : "light"}
-      >
+        className={styles.settingContainer}>
         <Theme isChecked={isDark} handleChange={handleChange} />
+  
+        <button className={styles.backButton} onClick={backToHome}>Back to Home</button>
       </div>
-      <div>
-        <NavLink to="/"> Back</NavLink>
-      </div>
+      
+              
     </>
   );
 };

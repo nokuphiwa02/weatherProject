@@ -38,3 +38,7 @@
 .theme:checked + label::after {
   transform: translateX(24px);
 }
+
+label{
+  color: var(--primary-text-color);
+}

@@ -15,15 +15,11 @@ type HomeProps = {
 
 export const Home: React.FC<HomeProps> = ({
   weather,
-  isDark,
-  handleChange,
+ 
 }) => {
   return (
     <>
-      <div
-        className={styles.settingContainer}
-        data-theme={isDark ? "dark" : "light"}
-      >
+     
         <Navbar />
         <SearchBar />
         <WeatherCard
@@ -33,8 +29,8 @@ export const Home: React.FC<HomeProps> = ({
           humidity={weather[0].humidity}
         />
         <ForecastContainer />
-        <Theme isChecked={isDark} handleChange={handleChange} />
-      </div>
+      
+    
     </>
   );
 };

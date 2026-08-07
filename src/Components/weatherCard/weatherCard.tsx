@@ -1,31 +1,24 @@
 import styles from "./weatherCard.module.css";
-// import sun from "../../assets/sun.png";
+import type { WeatherData } from "../types/types";
 
-export type weatherCardProps = {
-  city: string;
-  temperature: number;
-  windSpeed: number;
-  humidity: number;
-};
 
-const WeatherCard = ({
-  city,
-  temperature,
-  windSpeed,
-  humidity,
-}: weatherCardProps) => {
+type WeatherProps = {
+  weather: WeatherData |null;
+}
+
+const WeatherCard: React.FC<WeatherProps> = ({weather}) => {
   return (
     <div className={styles.weatherCardContent}>
       <div className={styles.weatherCard}>
         <div className={styles.weatherCardHeader}>
-          <h2 id="location">Durban {city} </h2>
-          <p className={styles.p}>Tuesday, 04 August</p>
-          <h2 className={styles.time}>12 : 00</h2>
+          <h2 id="location"> {weather?.city} </h2>
+          <p className={styles.p}>{weather?.date}</p>
+
         </div>
         <div className={styles.weatherInfo}>
-          <p id="temp">temperature : 24 {temperature}°C</p>
-          <p id="condition">windspeed : 5km/h {windSpeed}</p>
-          <p id="humidity">Humidity: 58 {humidity}%</p>
+          <p id="temp">{weather?.temperature}°C</p>
+          <p id="condition">{weather?.windSpeed}</p>
+          <p id="humidity">{weather?.humidity}%</p>
         </div>
       </div>
     </div>

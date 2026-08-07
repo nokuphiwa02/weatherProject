@@ -15,8 +15,8 @@ export const App = () => {
   const city = "Durban";
 
   useEffect(() => {
-    // const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
-    const url = `https://api.weatherstack.com/current?access_key=${import.meta.env.VITE_WEATHER_API_KEY}&query=Durban`;
+    const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
+    const url = `https://api.weatherstack.com/current?access_key=${apiKey}&query=pietermaritzburg`;
 
     const startWeatherFetch = () => {
       setLoading(true);

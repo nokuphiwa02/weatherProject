@@ -19,7 +19,7 @@ export const Navbar = () => {
       <div className={styles.iconImage2}>
         <img src={twitter} alt="Twitter.png" />
         <img src={tikTok} alt="TikTok.png" />
-        <img className={styles['settingIcon']} onClick={navigateToSettings} src= {settingIcon} alt="settingIcon"/>
+        <img className={styles.settingIcon} onClick={navigateToSettings} src= {settingIcon} alt="settingIcon"/>
      
       </div>
      

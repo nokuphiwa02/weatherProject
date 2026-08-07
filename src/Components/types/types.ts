@@ -4,5 +4,6 @@ export interface WeatherData {
   windSpeed: number;
   humidity: number;
   date: number;
+  weatherIcons: string;
   
 }

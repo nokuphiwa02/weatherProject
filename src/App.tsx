@@ -34,6 +34,7 @@ export const App = () => {
             windSpeed: data.current.wind_speed,
             humidity: data.current.humidity,
             date: data.location.localtime,
+            weatherIcons:data.current.weatherIcons
           };
 
           setWeather([formattedData]);

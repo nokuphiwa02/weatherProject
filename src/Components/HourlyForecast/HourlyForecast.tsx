@@ -1,8 +1,13 @@
 import { Text } from "../Text/Text";
+import type { WeatherData } from "../types/types";
 import styles from "./HourlyForecast.module.css";
 
+type HourlyForecastProps={
+  weather: WeatherData[];
+}
 
-export const HourlyForecast = () => {
+
+export const HourlyForecast:React.FC<HourlyForecastProps> = ({weather}) => {
   return (
     <>
 
@@ -10,45 +15,45 @@ export const HourlyForecast = () => {
       
 
       <div className={styles.hourlyForecast}>
-        <Text variant="p">6:00 AM</Text>
+        <Text variant="p">{weather[0].time}</Text>
         ☀️
-        <Text variant="h2">22°C</Text>
+        <Text variant="h2">{weather[0].temperature}°C</Text>
       </div>
 
       <div className={styles.hourlyForecast}>
-        <Text variant="p">7:00 AM</Text>
+        <Text variant="p">{weather[0].time}</Text>
         🌨️
-        <Text variant="h2">22°C</Text>
+        <Text variant="h2">{weather[0].temperature}°C</Text>
       </div>
 
       <div className={styles.hourlyForecast}>
-        <Text variant="p">8:00 AM</Text>
+        <Text variant="p">{weather[0].time}</Text>
        🌧️
-        <Text variant="h2">22°C</Text>
+        <Text variant="h2">{weather[0].temperature}°C</Text>
       </div>
 
       <div className={styles.hourlyForecast}>
-        <Text variant="p">9:00 AM</Text>
+        <Text variant="p">{weather[0].time}</Text>
         💭
-        <Text variant="h2">22°C</Text>
+        <Text variant="h2">{weather[0].temperature}°C</Text>
       </div>
 
       <div className={styles.hourlyForecast}>
-        <Text variant="p">10:00 AM</Text>
+        <Text variant="p">{weather[0].time}</Text>
        ☀️
-        <Text variant="h2">22°C</Text>
+        <Text variant="h2">{weather[0].temperature}°C</Text>
       </div>
 
       <div className={styles.hourlyForecast}>
-        <Text variant="p">11:00 AM</Text>
+        <Text variant="p">{weather[0].time}</Text>
        ⛅
-        <Text variant="h2">22°C</Text>
+        <Text variant="h2">{weather[0].temperature}°C</Text>
       </div>
 
       <div className={styles.hourlyForecast}>
-        <Text variant="p">12:00 PM</Text>
+        <Text variant="p">{weather[0].time}</Text>
        ⛈️
-        <Text variant="h2">22°C</Text>
+        <Text variant="h2">{weather[0].temperature}°C</Text>
       </div>
     </div>
     </>

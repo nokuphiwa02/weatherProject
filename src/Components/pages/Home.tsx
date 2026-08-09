@@ -21,7 +21,7 @@ export const Home: React.FC<HomeProps> = ({ weather }) => {
       <Navbar />
       <SearchBar />
       <WeatherCard weather={weather[0]} />
-      <ForecastContainer />
+      <ForecastContainer weather={weather} />
     </>
   );
 };

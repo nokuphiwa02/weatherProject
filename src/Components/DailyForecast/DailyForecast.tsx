@@ -1,48 +1,54 @@
 import styles from "./DailyForecast.module.css";
 import { Text } from "../Text/Text";
+import type { WeatherData } from "../types/types";
 
-export const DailyForecast = () => {
+type DailyForecastProps= {
+  weather:WeatherData[];
+}
+
+export const DailyForecast:React.FC<DailyForecastProps> = ({weather}) => {
   return (
     <>
       <div className={styles.DailyContent}>
         <div className={styles.dailyForecast}>
-          <Text variant="p">Monday</Text>
+          <Text variant="p">{weather[0].date}</Text>
           ☀️
-          <Text variant="h2">22°C</Text>
+          <Text variant="h2">{weather[0].temperature}°C</Text>
         </div>
 
         <div className={styles.dailyForecast}>
-          <Text variant="p">Tuesday</Text>
+          <Text variant="p">{weather[0].date}</Text>
           🌨️
-          <Text variant="h2">22°C</Text>
+          <Text variant="h2">{weather[0].temperature}°C</Text>
         </div>
 
         <div className={styles.dailyForecast}>
-          <Text variant="p">Wednesday</Text>
+          <Text variant="p">{weather[0].date}</Text>
           🌧️
-          <Text variant="h2">22°C</Text>
+          <Text variant="h2">{weather[0].temperature}°C</Text>
         </div>
 
         <div className={styles.dailyForecast}>
-          <Text variant="p">Thursday</Text>
+          <Text variant="p">{weather[0].date}</Text>
           💭
-          <Text variant="h2">22°C</Text>
+          <Text variant="h2">{weather[0].temperature}°C</Text>
         </div>
 
         <div className={styles.dailyForecast}>
-          <Text variant="p">Friday</Text>
+          <Text variant="p">{weather[0].date}</Text>
           ☀️
-          <Text variant="h2">22°C</Text>
+          <Text variant="h2">{weather[0].temperature}°C</Text>
         </div>
 
         <div className={styles.dailyForecast}>
-          <Text variant="p">saturday</Text>⛅<Text variant="h2">22°C</Text>
+          <Text variant="p">{weather[0].date}</Text>
+          ⛅<Text variant="h2">{weather[0].temperature}°C</Text>
         </div>
 
         <div className={styles.dailyForecast}>
-          <Text variant="p">Sunday</Text>
+          <Text variant="p">{weather[0].date}</Text>
           ⛈️
-          <Text variant="h2">22°C</Text>
+          <Text variant="h2">{weather[0].temperature}°C</Text>
         </div>
       </div>
     </>

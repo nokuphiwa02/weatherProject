@@ -11,15 +11,7 @@ const cityCoordinates: { [key: string]: { lat: number; lon: number } } = {
   johannesburg: { lat: -26.2041, lon: 28.0473 },
   cape_town: { lat: -33.9249, lon: 18.4241 },
 };
-const formatToOnlyTime = (isoString: string) => {
-  const dateObj = new Date(isoString);
-  return new Intl.DateTimeFormat("en-GB", { hour: "2-digit", minute: "2-digit", hour12: false }).format(dateObj);
-};
 
-const formatToHumanDate = (isoString: string) => {
-  const dateObj = new Date(isoString);
-  return new Intl.DateTimeFormat("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric" }).format(dateObj);
-};
 
 export const App = () => {
   const [isDark, setIsDark] = useState(false);
@@ -75,15 +67,17 @@ export const App = () => {
           return res.json();
         })
         .then((data) => {
+          const condition = getWeatherCondition(data.current.weather_code);
+
           const formattedData: WeatherData = {
             city: city,
-            condition: getWeatherCondition(data.current.weather_code),
             temperature: Math.round(data.current.temperature_2m),
             windSpeed: data.current.wind_speed_10m,
             humidity: data.current.relative_humidity_2m,
             date: data.current.time,
             time: data.current.time,
-            weatherIcons: getWeatherCondition(data.current.weather_code),
+            condition,
+            weatherIcons: condition,
             hourlyList: Array.isArray(data.hourly?.time)
               ? data.hourly.time.map((time: string, index: number) => ({
                   time,

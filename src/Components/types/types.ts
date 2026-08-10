@@ -1,3 +1,11 @@
+export interface HourlyItem {
+  time: number;
+  condition: string;
+  temperature: number;
+  humidity: number;
+  weatherIcons: string;
+}
+
 export interface WeatherData {
   time:number;
   city: string;
@@ -5,6 +13,7 @@ export interface WeatherData {
   windSpeed: number;
   humidity: number;
   date: number;
+  condition: string;
   weatherIcons: string;
-  hour:number;
+  hourlyList: HourlyItem[];
 }

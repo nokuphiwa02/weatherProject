@@ -5,13 +5,15 @@ import { ForecastContainer } from "../../Components/forecastContainer/ForecastCo
 import React from "react";
 import type { WeatherData } from "../types/types";
 
+
 type HomeProps = {
   weather: WeatherData[];
   isDark: boolean;
   handleChange: () => void;
+  onSearchCity: (city: string) => void;
 };
 
-export const Home: React.FC<HomeProps> = ({ weather }) => {
+export const Home: React.FC<HomeProps> = ({ weather,  onSearchCity}) => {
   if (!weather || weather.length === 0) {
     return <div>No weather data available.</div>;
   }
@@ -19,7 +21,7 @@ export const Home: React.FC<HomeProps> = ({ weather }) => {
   return (
     <>
       <Navbar />
-      <SearchBar />
+      <SearchBar onSearch={onSearchCity}/>
       <WeatherCard weather={weather[0]} />
       <ForecastContainer weather={weather} />
     </>

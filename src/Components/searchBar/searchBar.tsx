@@ -1,15 +1,20 @@
 import styles from "./searchBar.module.css";
-import searchIcon from "../../assets/searchIcon.png";
+import React from "react";
 
-export const SearchBar = () => {
+
+type SearchProps = { 
+  onSearch: (text: string) => void; 
+};
+
+export const SearchBar: React.FC<SearchProps> = ({ onSearch }) => {
   return (
     <div className={styles.searchBar}>
-      <input
-        type="text"
-        placeholder="Search..."
-        className={styles.searchInput}
+      <input 
+        type="text" 
+        placeholder="Search..." 
+        className={styles.searchInput} 
+        onChange={(e) => onSearch(e.target.value)} 
       />
-      <img src={searchIcon} alt="Search Icon" className={styles.searchIcon} />
     </div>
   );
 };

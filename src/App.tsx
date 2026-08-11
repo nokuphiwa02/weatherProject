@@ -77,6 +77,7 @@ export const App = () => {
             date: data.current.time,
             time: data.current.time,
             condition,
+            // days: data.days,
             weatherIcons: condition,
             hourlyList: Array.isArray(data.hourly?.time)
               ? data.hourly.time.map((time: string, index: number) => ({
@@ -86,6 +87,7 @@ export const App = () => {
                 }))
               : [],
           };
+          console.log(data)
 
           setWeather([formattedData]);
           setLoading(false);

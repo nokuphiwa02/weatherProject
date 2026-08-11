@@ -16,13 +16,17 @@ const currentCityData = weather[0];
 
   return (
     <div className={styles.hourlyContent}>
-      {/* Loop through each element in your hourly database array */}
+     
       {currentCityData.hourlyList.slice(0, 6).map((hourItem, index) => (
         <div key={index} className={styles.hourlyForecast}>
-          {/* Displays dynamic formatted hours like "21:00", "22:00" */}
-          <Text variant="p">{hourItem.time}</Text> 
-          <span>{hourItem.condition}</span>
-          {/* Displays varying temperatures for that specific hour */}
+          
+          <Text variant="p">{new Date(hourItem.time).toLocaleTimeString([], {
+            hour:"2-digit",
+            minute:"2-digit",
+            hour12:false,
+          })}</Text> 
+
+        
           <Text variant="h2">{hourItem.temperature}°C</Text>
         </div>
       ))}

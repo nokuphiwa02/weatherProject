@@ -9,7 +9,7 @@ type ForecastProps = {
 };
 
 export const ForecastContainer: React.FC<ForecastProps> = ({ weather }) => {
-   const [active, setActive] = useState<"hourly" | "daily">("hourly");
+  const [active, setActive] = useState("hourly");
 
   return (
     <div className="content">

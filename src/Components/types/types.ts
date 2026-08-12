@@ -15,6 +15,7 @@ export interface WeatherData {
   windSpeed: number;
   humidity: number;
   date: string;
+  days:DailyApiData[];
   condition: string;
   weatherIcons: string;
   hourlyList: HourlyItem[];
@@ -25,4 +26,10 @@ export interface DailyItem{
   icon:string;
   date:string ;
   temperature: number;
+}
+
+export interface DailyApiData{
+  date: string;
+   temperature: number;
+   weather_code: number;
 }

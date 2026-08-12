@@ -5,36 +5,37 @@ import { HourlyForecast } from "../HourlyForecast/HourlyForecast";
 import type { WeatherData } from "../types/types";
 
 type ForecastProps = {
-  weather: WeatherData[];
-  units: string;
+weather: WeatherData[];
+units: string;
 };
 
 export const ForecastContainer: React.FC<ForecastProps> = ({
-  weather,
-  units,
+weather,
+units,
 }) => {
-  const [active, setActive] = useState<"hourly" | "daily">("hourly");
+const [active, setActive] = useState<"hourly" | "daily">("hourly");
 
-  return (
-    <div className="content">
-      <div className="btns">
-        <button
-          onClick={() => setActive("hourly")}
-          className={active === "hourly" ? "active" : ""}
-          disabled={active === "hourly"}
-        >
-          Hourly Forecast
-        </button>
-        <button
-          onClick={() => setActive("daily")}
-          className={active === "daily" ? "active" : ""}
-          disabled={active === "daily"}
-        >
-          Daily Forecast
-        </button>
-      </div>
-      {active === "daily" && <DailyForecast weather={weather} units={units} />}
-      {active === "hourly" && <HourlyForecast weather={weather} />}
-    </div>
-  );
+return (
+<div className="content">
+<div className="btns">
+<button
+onClick={() => setActive("hourly")}
+className={active === "hourly" ? "active" : ""}
+disabled={active === "hourly"}
+>
+Hourly Forecast
+</button>
+<button
+onClick={() => setActive("daily")}
+className={active === "daily" ? "active" : ""}
+disabled={active === "daily"}
+>
+Daily Forecast
+</button>
+</div>
+{active === "daily" && <DailyForecast weather={weather} units={units} />}
+{active === "hourly" && <HourlyForecast weather={weather} units={units}/>}
+
+</div>
+);
 };

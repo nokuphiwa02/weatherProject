@@ -32,14 +32,14 @@ onClick={() => changeUnits("°C")}
 src={ferenhit}
 alt="ferenhit.png"
 onClick={() => changeUnits("°F")}
-        />
-        <img
-          className={styles.settingIcon}
-          onClick={navigateToSettings}
-          src={settingIcon}
-          alt="settingIcon"
-        />
-      </div>
-    </div>
-  );
+/>
+<img
+className={styles.settingIcon}
+onClick={navigateToSettings}
+src={settingIcon}
+alt="settingIcon"
+/>
+</div>
+</div>
+);
 };

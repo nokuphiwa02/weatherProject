@@ -7,7 +7,10 @@ type HourlyForecastProps = {
   units: string;
 };
 
-export const HourlyForecast: React.FC<HourlyForecastProps> = ({ weather, units }) => {
+export const HourlyForecast: React.FC<HourlyForecastProps> = ({
+  weather,
+  units,
+}) => {
   const currentCityData = Array.isArray(weather) ? weather[0] : weather;
 
   if (!currentCityData || !currentCityData.hourlyList) {
@@ -17,9 +20,12 @@ export const HourlyForecast: React.FC<HourlyForecastProps> = ({ weather, units }
   return (
     <div className={styles.hourlyContent}>
       {currentCityData.hourlyList.slice(0, 6).map((hourItem, index) => {
+        const temperature = Math.round(
+          units === "°C"
+            ? hourItem.temperature
+            : hourItem.temperature * 1.8 + 32,
+        );
 
-        const temperature = units === "°C" ? hourItem.temperature : hourItem.temperature * 1.8 + 32;
-        
         return (
           <div key={index} className={styles.hourlyForecast}>
             <Text variant="p">
@@ -28,7 +34,7 @@ export const HourlyForecast: React.FC<HourlyForecastProps> = ({ weather, units }
                 minute: "2-digit",
               })}
             </Text>
-            
+
             <Text variant="h2">{temperature}°C</Text>
           </div>
         );

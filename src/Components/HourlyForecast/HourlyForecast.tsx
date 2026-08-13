@@ -19,7 +19,7 @@ export const HourlyForecast: React.FC<HourlyForecastProps> = ({
 
   return (
     <div className={styles.hourlyContent}>
-      {currentCityData.hourlyList.slice(0, 6).map((hourItem, index) => {
+      {currentCityData.hourlyList.slice(0, 24).map((hourItem, index) => {
         const temperature = Math.round(
           units === "°C"
             ? hourItem.temperature

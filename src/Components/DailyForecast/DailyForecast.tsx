@@ -19,7 +19,7 @@ export const DailyForecast: React.FC<DailyForecastProps> = ({
 
   return (
     <div className={styles.dailyContent}>
-      {currentCityData.days.slice(0, 6).map((dayItem, index) => {
+      {currentCityData.days.slice(0, 24).map((dayItem, index) => {
         const temparature = Math.round(
           units === "°C" ? dayItem.temperature : dayItem.temperature * 1.8 + 32,
         );

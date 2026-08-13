@@ -8,7 +8,8 @@
   justify-content: center;
   align-items: center;
   background-color: var(--background-color);
-  color: white;
+  color:  var(--primary-text-color);
+  overflow-x: auto;
 }
 
 
@@ -53,11 +54,11 @@
 }
 
 .hrly{
-    color: white;
+    color: var(--primary-text-color);
     background-color: #053d3d;
 }
 
 .daily{
-    color: white;
+    color:  var(--primary-text-color);
      background-color: #053d3d ;
 }
